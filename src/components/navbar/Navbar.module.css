@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  padding: 1rem;
+  background: #3b5998;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icon span {
+  font-weight: bold;
+  color: #dfe3ee;
+}
+
+.navlist {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+.navlist a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navlist a:hover,
+.icon:hover {
+  color: #dfe3ee;
+}
+
+.active {
+  color: #8b9dc3;
+  background-color: #3b5998;
+}
