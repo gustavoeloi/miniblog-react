@@ -34,12 +34,12 @@ const Register = () => {
   }, [authError]);
 
   return (
-    <div className={styles.register}>
-      <div className={styles.formHeader}>
+    <div className="form-container">
+      <div className="form-header">
         <h3>Cadastre-se</h3>
         <p>É gratuito e sempre será.</p>
       </div>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
           Nome de Usuário
           <input

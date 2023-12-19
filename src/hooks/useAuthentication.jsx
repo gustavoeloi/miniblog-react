@@ -3,6 +3,7 @@ import { db } from "../firebase/config";
 import {
   getAuth,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   updateProfile,
   signOut,
 } from "firebase/auth";
@@ -61,6 +62,21 @@ export const useAuthentication = () => {
     }
   };
 
+  const login = async (data) => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      setError("Credenciais Inválidas");
+
+      setLoading(false);
+    }
+  };
+
   const logout = async () => {
     if (checkIfIsCancelled()) return;
     setLoading(true);
@@ -85,5 +101,6 @@ export const useAuthentication = () => {
     logout,
     error,
     loading,
+    login,
   };
 };
