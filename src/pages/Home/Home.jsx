@@ -1,11 +1,11 @@
 import styles from "./Home.module.css";
 
+import { useAuthValue } from "../../context/authContext";
+
 const Home = () => {
-  return (
-    <div>
-      <h1>Pagina Home</h1>
-    </div>
-  );
+  const { user } = useAuthValue();
+
+  return <div>{user && <h1>Olá, {user.displayName} &#128075; </h1>}</div>;
 };
 
 export default Home;

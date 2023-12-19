@@ -1,0 +1,30 @@
+.sectionAbout {
+  width: 100%;
+  margin: 32px 0;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sectionAbout h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #3b5998;
+}
+
+.sectionAbout p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.Images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.Images img {
+  max-width: 300px;
+  height: 100px;
+}
