@@ -1,12 +1,23 @@
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 
+import { useLocation } from "react-router-dom";
+
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { useAuthValue } from "../../context/authContext";
+import { useEffect, useState } from "react";
+import SearchInput from "../SearchInput/SearchInput";
 
 const Navbar = () => {
+  const location = useLocation();
+  const [isHomePage, setIsHomePage] = useState(false);
+
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
+
+  useEffect(() => {
+    setIsHomePage(location.pathname === "/home");
+  }, [location]);
 
   const handleLogout = () => {
     return new Promise((resolve, reject) => {
@@ -27,6 +38,7 @@ const Navbar = () => {
         <NavLink className={styles.icon} to="/">
           Mini <span>blog</span>
         </NavLink>
+        {isHomePage && <SearchInput />}
         <ul className={styles.navlist}>
           <li>
             <NavLink

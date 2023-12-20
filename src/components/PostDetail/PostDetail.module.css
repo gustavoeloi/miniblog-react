@@ -1,0 +1,50 @@
+/* Estilos para o contêiner principal do post */
+.post_detail {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para a imagem do post */
+.post_detail img {
+  width: 600px; /* Definindo largura fixa */
+  height: 300px; /* Definindo altura fixa */
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço, mantendo a proporção */
+  margin-bottom: 10px;
+}
+
+/* Estilos para o título do post */
+.post_detail h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+/* Estilos para o autor do post */
+.post_detail p {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Estilos para as tags do post */
+.post_detail ul {
+  list-style-type: none;
+}
+
+.post_detail li {
+  font-style: italic;
+  color: #888;
+}
+
+/* Estilos para o link "Ler" */
+.post_detail a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3b5998;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 10px;
+}
